@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter_24pt-Medium.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Kuunari;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Hecativas;
+    src: url(../fonts/hecativas-bold-subset\ \(2\).woff2);
+    font-display: swap;
+}
+
+
+
+
+
+
+.head {
+    padding-top: 15px;
+    padding-bottom: 29px;
+    background-color: #000000;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head__col {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 13px;
+}
+
+.head__text {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: Inter;
+}
+
+.head__col__image {}
+
+.head__title {
+    font-family: Kuunari, sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 125%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.head__title__span {
+    color: #00B167;
+}
+
+.head__main {
+    padding-top: 36px;
+    padding-left: 20px;
+}
+
+.head__main__text {
+    padding: 8px;
+    background-color: #0D7449;
+    max-width: 198px;
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 21px;
+}
+
+.head__main__info {
+    display: flex;
+    align-items: center;
+    gap: 7.05px;
+    margin-bottom: 8px;
+    z-index: 10;
+
+}
+
+.head__main__info__image {}
+
+.head__main__info__text {
+    max-width: 186px;
+    color: #FFFFFF;
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+
+
+}
+
+.head__main__info__span {
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    color: #FFFFFF;
+
+}
+
+.head__main__info__title {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: clamp(10px, 9vw, 60px);
+    margin-bottom: 11px;
+}
+
+.head__main__info__btn {
+    padding: 30px 15px;
+    max-width: 353px;
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Kuunari, sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 9vw, 28px);
+    line-height: 100%;
+    letter-spacing: 5%;
+    justify-content: center;
+    background: linear-gradient(270deg, #FECC63 3.64%, #FFE7B9 40.8%, #FED48C 91.15%);
+    box-shadow: 0px 4px 0px 0px #CCA665;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #3C2E19;
+    position: relative;
+    z-index: 4;
+    margin-bottom: 40px;
+
+
+}
+
+.head__info {
+    position: relative;
+
+}
+
+.head__info__img {
+    position: absolute;
+    top: -265px;
+    z-index: 3;
+    right: 0;
+}
+
+.head__inffo__img__bg {
+    position: absolute;
+    top: -270px;
+    right: 0;
+    z-index: 1;
+}
+
+.head__info__col {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 31px;
+}
+
+.head__info__col__text {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+
+
+
+}
+
+.head__info__col__image {
+    position: absolute;
+    left: 65%;
+    bottom: -5%;
+
+}
+
+.foot {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #0D7449;
+    border-radius: 20px;
+    max-width: 364px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 10px 0px #0D7449B2;
+    gap: 4px;
+
+}
+
+.food__image {}
+
+.food__col {}
+
+.food__title {
+    font-family: Helvetica;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.food__text {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    max-width: 241px;
+}
+
+.food__text__span {
+    font-family: Helvetica , sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+}

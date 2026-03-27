@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buxara webinar</title>
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="./css/main.css" />
+    </noscript>
+
+</head>
+
+<body>
+
+    <main class="head">
+        <div class="head__col">
+            <p class="head__text"><img width="20" height="20" class="head__col__image" src="./images/clanedar.png"
+                    alt="calendar">27-Mart</p>
+            <p class="head__text"><img width="16" height="16" class="head__col__image" src="./images/time.png"
+                    alt="time image">Soat: 20:00</p>
+        </div>
+        <h2 class="head__title">Shov-shuvlarga sabab <br> bo'lgan <span class="head__title__span">Baxtiyor Zaripovdan
+                <br> Anor Residence</span> kottedjlari</h2>
+
+
+        <div class="head__main">
+            <p class="head__main__text">Birinchi 10 ta xaridorlarimiz uchun 6 000$ real chegirma!</p>
+            <div class="head__main__info">
+                <img class="head__main__info__image" src="./images/Vector.png" width="21.66" height="21.66"
+                    alt="vector image" loading="lazy" decoding="async">
+                <p class="head__main__info__text">Narxlar, <span class="head__main__info__span">bo‘lib to‘lash</span> va
+                    <span class="head__main__info__span">boshlang‘ich to‘lov</span> shartlari</p>
+            </div>
+
+            <div class="head__main__info">
+                <img class="head__main__info__image" src="./images/Vector.png" width="21.66" height="21.66"
+                    alt="vector image" loading="lazy" decoding="async">
+                <p class="head__main__info__text"> Loyihaning to‘liq taqdimoti render, <span
+                        class="head__main__info__span">reja va infratuzilma</span></p>
+            </div>
+
+            <div class="head__main__info">
+                <img class="head__main__info__image" src="./images/Vector.png" width="21.66" height="21.66"
+                    alt="vector image" loading="lazy" decoding="async">
+                <p class="head__main__info__text">Birinchi xaridorlarimizga <span class="head__main__info__span">maishiy texnika to’plamlarini sovg’a qilamiz</span></p>
+            </div>
+
+            <div class="head__info">
+                <img class="head__info__img" src="./images/human.png" alt="human image" loading="lazy" decoding="async">
+                <img class="head__inffo__img__bg" src="./images/background img.png" loading="lazy" decoding="async" alt="">
+            </div>
+        </div>
+            <h2 class="head__main__info__title" id="timer">00:15:00</h2>
+
+            <button class="head__main__info__btn">BEPUL QATNASHISH</button>
+
+            <div class="head__info__col">
+                <p class="head__info__col__text">Bepul qatnashish uchun bosing</p>
+                <img class="head__info__col__image" loading="lazy" decoding="async" width="68" src="./images/arrow.png" alt="">
+            </div>
+
+            <div class="foot">
+                <img class="food__image" src="./images/prise.png" width="76" loading="lazy" decoding="async" alt="prise image">
+                <div class="food__col">
+                    <h3 class="food__title">maxsus sovg’a</h3>
+                    <p class="food__text">Birinchi 10 ta xaridorlarimiz uchun <span class="food__text__span">6 000$ real chegirma!</span></p>
+                </div>
+            </div>
+    </main>
+
+
+    <script>
+        let timeLeft = 120; // 2 minut
+
+        const timer = document.getElementById('timer');
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timer.textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            setInterval(() => {
+                timeLeft--;
+                updateTimer();
+
+                if (timeLeft <= 0) {
+                    timeLeft = 120; // tugagach avtomatik qayta boshlanadi
+                    updateTimer();
+                }
+            }, 1000);
+        }
+
+        // Boshlanishi
+        updateTimer();
+        startTimer();
+    </script>
+
+</body>
+
+</html>
