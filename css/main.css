@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: Kuunari;
-    src: url(../fonts/BebasNeue-Regular.ttf);
+    src: url(../fonts/Mika\ Melvas\ -\ Kuunari\ Bold.otf);
     font-display: swap;
 }
 
@@ -23,9 +23,15 @@
 }
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-
+body {
+    background-color: #000000;
+}
 
 .head {
     padding-top: 15px;
@@ -36,6 +42,7 @@
     margin-right: auto;
 }
 
+/* DATE + TIME ROW */
 .head__col {
     display: flex;
     margin-left: auto;
@@ -50,106 +57,132 @@
     color: #FFFFFF;
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-family: Inter;
+    gap: 6px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
 }
 
-.head__col__image {}
-
+/* TITLE */
 .head__title {
     font-family: Kuunari, sans-serif;
-    font-weight: 700;
-    font-size: 34px;
+    font-weight: 900;
+    font-size: clamp(26px, 8vw, 34px);
     line-height: 125%;
     text-align: center;
-    vertical-align: middle;
     text-transform: uppercase;
     color: #FFFFFF;
+    padding: 0 10px;
 }
 
 .head__title__span {
     color: #00B167;
 }
 
+/* MAIN CONTENT AREA */
 .head__main {
     padding-top: 36px;
     padding-left: 20px;
+    position: relative;
 }
 
+/* Green badge */
 .head__main__text {
     padding: 8px;
     background-color: #0D7449;
     max-width: 198px;
-    font-family: Helvetica;
+    font-family: Helvetica , sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    letter-spacing: 0%;
-    vertical-align: middle;
     color: #FFFFFF;
     border-radius: 5px;
     margin-bottom: 21px;
+    position: relative;
+    z-index: 5;
 }
 
+/* Bullet points */
 .head__main__info {
     display: flex;
-    align-items: center;
-    gap: 7.05px;
-    margin-bottom: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
     z-index: 10;
-
+    position: relative;
+    max-width: 220px;
 }
 
-.head__main__info__image {}
+.head__main__info__image {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
 
 .head__main__info__text {
-    max-width: 186px;
     color: #FFFFFF;
-    font-family: Helvetica, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    vertical-align: middle;
-
-
 }
 
 .head__main__info__span {
-    font-family: Helvetica, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    vertical-align: middle;
     color: #FFFFFF;
-
 }
 
+/* HUMAN + BG images */
+.head__info {
+    position: relative;
+    height: 0;
+}
+
+.head__info__img {
+    position: absolute;
+    top: -255px;
+    right: 0;
+    z-index: 3;
+    width: clamp(160px, 45vw, 210px);
+}
+
+.head__inffo__img__bg {
+    position: absolute;
+    top: -280px;
+    right: 0;
+    z-index: 1;
+    width: clamp(160px, 48vw, 220px);
+}
+
+/* TIMER */
 .head__main__info__title {
-    font-family: Helvetica, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: clamp(22px, 7vw, 28px);
     line-height: 100%;
-    vertical-align: middle;
     text-transform: uppercase;
     color: #FFFFFF;
     padding-left: clamp(10px, 9vw, 60px);
     margin-bottom: 11px;
+    position: relative;
+    z-index: 5;
 }
 
+/* CTA BUTTON */
 .head__main__info__btn {
-    padding: 30px 15px;
+    padding: 26px 15px;
     max-width: 353px;
-    width: 100%;
+    width: calc(100% - 20px);
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    font-family: Kuunari, sans-serif;
-    font-weight: 700;
-    font-size: clamp(20px, 9vw, 28px);
-    line-height: 100%;
-    letter-spacing: 5%;
     justify-content: center;
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+    font-size: clamp(20px, 7vw, 28px);
+    line-height: 100%;
+    letter-spacing: 0.05em;
     background: linear-gradient(270deg, #FECC63 3.64%, #FFE7B9 40.8%, #FED48C 91.15%);
     box-shadow: 0px 4px 0px 0px #CCA665;
     border: none;
@@ -158,30 +191,17 @@
     color: #3C2E19;
     position: relative;
     z-index: 4;
-    margin-bottom: 40px;
-
-
+    margin-bottom: 16px;
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-transform: uppercase;
 }
 
-.head__info {
-    position: relative;
-
+.head__main__info__btn:active {
+    transform: translateY(3px);
+    box-shadow: 0px 1px 0px 0px #CCA665;
 }
 
-.head__info__img {
-    position: absolute;
-    top: -265px;
-    z-index: 3;
-    right: 0;
-}
-
-.head__inffo__img__bg {
-    position: absolute;
-    top: -270px;
-    right: 0;
-    z-index: 1;
-}
-
+/* ARROW HINT */
 .head__info__col {
     display: flex;
     align-items: center;
@@ -191,25 +211,22 @@
 }
 
 .head__info__col__text {
-    font-family: Helvetica, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 100%;
-    text-align: center;
     color: #FFFFFF;
     padding-bottom: 10px;
-
-
-
 }
 
 .head__info__col__image {
     position: absolute;
     left: 65%;
     bottom: -5%;
-
+    /* arrow.png qora fonda ko'rinmasin deb invert */
+    filter: invert(1);
 }
 
+/* FOOTER CARD */
 .foot {
     display: flex;
     align-items: center;
@@ -220,36 +237,42 @@
     margin-right: auto;
     box-shadow: 0px 4px 10px 0px #0D7449B2;
     gap: 4px;
-
+    padding: 8px 12px;
+    background: rgba(13, 116, 73, 0.08);
 }
 
-.food__image {}
+.food__image {
+    flex-shrink: 0;
+    width: 76px;
+}
 
-.food__col {}
+.food__col {
+    padding: 6px;
+}
 
 .food__title {
-    font-family: Helvetica;
+    font-family: Inter, sans-serif;
     font-weight: 700;
-    font-style: Bold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 23px;
     text-transform: uppercase;
     color: #FFFFFF;
-
+    margin-bottom: 4px;
 }
 
 .food__text {
-    font-family: Helvetica, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 150%;
     color: #FFFFFF;
     max-width: 241px;
 }
 
 .food__text__span {
-    font-family: Helvetica , sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 150%;
+    color: #FFFFFF;
 }
